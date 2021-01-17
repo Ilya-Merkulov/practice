@@ -1,0 +1,22 @@
+<%= form_for @item do |f| %>
+  <div class="form-new-group">
+    <%= f.label :title  %>
+    <%= f.text_field :title  %>
+  </div>
+  <div class="form-new-group">
+    <%= f.label :text %>
+    <%= f.text_field :text %>
+    <!--number_field-->
+  </div>
+  <div class="form-new-group">
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+  </div>
+  <div class="form-new-group">
+    <%= f.label :user_id %>
+    <%= f.text_field :user_id %>
+  </div>
+  <%= f.submit %>
+
+
+<% end %>

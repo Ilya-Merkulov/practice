@@ -1,0 +1,16 @@
+<%= render partial: 'navbar' %>
+
+<h1><%= @item.title %></h1>
+<p><%= @item.text %></p>
+<p><%= @item.size %></p>
+<p><%= @item.user_id%></p>
+
+<div class="link-container">
+  <%= link_to 'Edit', edit_item_path(@item.id) %>
+</div>
+<div class="link-container">
+  <%= link_to 'Delete', item_path(@item.id), method: :delete %>
+</div>
+<div class="link-container">
+  <%= link_to 'Back to item', items_path %>
+</div>

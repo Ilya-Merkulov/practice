@@ -1,0 +1,30 @@
+<%= form_for @user do |f| %>
+  <div class="form-new-group">
+    <%= f.label :name  %>
+    <%= f.text_field :name  %>
+  </div>
+  <div class="form-new-group">
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+    <!--number_field-->
+  </div>
+  <div class="form-new-group">
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="form-new-group">
+    <%= f.label :login %>
+    <%= f.text_field :login %>
+  </div>
+  <div class="form-new-group">
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+  </div>
+  <div class="form-new-group">
+    <%= f.label :city_id %>
+    <%= f.select :city_id, City.all.map { |c| [c.name, c.id] }%>
+  </div>
+  <%= f.submit %>
+
+
+<% end %>
